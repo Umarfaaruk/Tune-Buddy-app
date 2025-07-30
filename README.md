@@ -1,56 +1,110 @@
-🎵 Tune Buddy - AI Music Companion
-Welcome to Tune Buddy, your personal AI-powered music companion! This interactive web application recommends Telugu songs based on your mood, favorite genres, or artists. But it doesn't stop there—it can even compose a brand new, original song just for you!
 
-🚀 Check out the live app here:
-           https://tune-buddy.streamlit.app/
+# 🎵 Tune Buddy - AI Music Companion
 
-✨ Key Features
-Conversational Recommendations: Chat naturally with the AI to get song suggestions tailored to your mood or taste.
+Welcome to **Tune Buddy**, your personal **AI-powered music companion**! This interactive web application recommends **Telugu songs** based on your mood, favorite genres, or artists—and can even **compose a brand-new, original song just for you**!
 
-AI Songwriter: Ask the assistant to "create a song," and it will generate original lyrics based on your theme.
+🌐 **[Live App Demo](https://tune-buddy.streamlit.app/)**
 
-Persistent Chat History: All your conversations are saved! You can revisit previous chats and recommendations from the sidebar.
+---
 
-New Chat Functionality: Easily start a fresh conversation at any time with the "New Chat" button.
+## ✨ Key Features
 
-Interactive Frontend: A clean, responsive, and user-friendly interface built with Streamlit.
+- **🎙 Conversational Recommendations**  
+  Chat naturally with the AI to get song suggestions tailored to your mood or music taste.
 
-🛠️ Tech Stack
-This project demonstrates a full-stack development cycle, from the AI backend to a deployed frontend with a persistent database.
+- **📝 AI Songwriter**  
+  Ask the assistant to "create a song"—it will generate original lyrics based on your given theme.
 
-AI Backend: Dify.ai for orchestrating the LLM (like Gemini or ChatGPT) and managing the prompt engineering.
+- **📚 Persistent Chat History**  
+  All your conversations are saved. Revisit previous chats and recommendations from the sidebar.
 
-Frontend: Streamlit for building the interactive web application in Python.
+- **🆕 New Chat Functionality**  
+  Start a fresh session anytime with the “New Chat” button.
 
-Database: Google Firestore for storing and retrieving chat histories, enabling persistent conversations.
+- **💻 Interactive Frontend**  
+  A clean, responsive, and user-friendly interface built using Streamlit.
 
-Deployment: Streamlit Community Cloud for hosting the live application.
+---
 
-Version Control: Git & GitHub for source code management.
+## 🛠️ Tech Stack
 
-⚙️ How to Run Locally
-To run this project on your own machine, follow these steps:
+This project demonstrates a complete full-stack development cycle, from AI backend integration to frontend deployment and persistent storage.
 
-Clone the repository:
+| Layer        | Technology Used                        |
+|-----------------|----------------------------------------|
+| **AI Backend** | [Dify.ai](https://dify.ai) with LLMs like ChatGPT or Gemini |
+| **Frontend**  | [Streamlit](https://streamlit.io) (Python) |
+| **Database**  | [Google Firestore](https://firebase.google.com/docs/firestore) |
+| **Deployment**| [Streamlit Community Cloud](https://streamlit.io/cloud) |
+| **Version Control** | Git & GitHub |
 
+---
+
+## ⚙️ How to Run Locally
+
+Follow these steps to set up the project on your machine:
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Umarfaaruk/Tune-Buddy-app.git
 cd Tune-Buddy-app
+````
 
-Create and activate a virtual environment:
+### 2. Create & Activate a Virtual Environment
 
+```bash
 python -m venv venv
+# For Windows
 .\venv\Scripts\activate
+# For macOS/Linux
+source venv/bin/activate
+```
 
-Install the required libraries:
+### 3. Install Dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-Set up your secrets:
+### 4. Configure Secrets
 
-Create a file at .streamlit/secrets.toml.
+Create a file named `.streamlit/secrets.toml` and add your credentials:
 
-Add your Dify API key and URL, and your Firebase service account key (JSON).
+```toml
+# .streamlit/secrets.toml
+[dify]
+api_key = "your_dify_api_key"
+base_url = "your_dify_base_url"
 
-Run the app:
+[firebase]
+type = "service_account"
+project_id = "your_project_id"
+private_key_id = "your_private_key_id"
+private_key = "your_private_key"
+client_email = "your_client_email"
+client_id = "your_client_id"
+# ... rest of your Firebase service account fields
+```
 
+### 5. Run the App
+
+```bash
 streamlit run app.py
+```
+
+---
+
+## 🤝 Contributions
+
+Feel free to fork this repository, submit pull requests, or open issues if you’d like to contribute to Tune Buddy!
+
+---
+
+## 👨‍💻 Developed By
+
+**Umar Faaruk**
+
+> Built with ❤️ to blend AI and culture through music!
+
+```
